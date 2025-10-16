@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Combinatoria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Herramientas de Combinatoria</h1>
+    </header>
+
+    <main class="container">
+        <div class="calculator-card">
+            <h2>Permutaciones Ordinarias (Pn)</h2>
+            <p class="formula">Fórmula: $P_n = n!$</p>
+            <div class="input-group">
+                <label for="permN">Número de elementos (n):</label>
+                <input type="number" id="permN" placeholder="Ej: 5" min="0">
+            </div>
+            <button onclick="calcularPermutacion()">Calcular</button>
+            <div id="resultadoPerm" class="result-box">
+                </div>
+        </div>
+
+        <div class="calculator-card">
+            <h2>Combinaciones Ordinarias (C(n,k))</h2>
+            <p class="formula">Fórmula: $C(n,k) = \frac{n!}{k!(n-k)!}$</p>
+            <div class="input-group">
+                <label for="combN">Total de elementos (n):</label>
+                <input type="number" id="combN" placeholder="Ej: 10" min="0">
+            </div>
+            <div class="input-group">
+                <label for="combK">Elementos a elegir (k):</label>
+                <input type="number" id="combK" placeholder="Ej: 3" min="0">
+            </div>
+            <button onclick="calcularCombinacion()">Calcular</button>
+            <div id="resultadoComb" class="result-box">
+                </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
